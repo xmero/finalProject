@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>finalProjectv1</title>
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Title</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./signUp.html">Sign Up</a></li>
+                    <li><a href="#"data-toggle="modal" data-target="#login-modal">Login</a></li>
+                    <!-- login model test-->
+
+<div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+        <div class="loginmodal-container">
+          <h1>Login to Your Account</h1><br>
+          <form>
+          <input type="text" name="user" placeholder="Username">
+          <input type="password" name="pass" placeholder="Password">
+          <input type="submit" name="login" class="login loginmodal-submit" value="Login">
+          </form>
+          
+          <div class="login-help">
+          <a href="#">Register</a> - <a href="#">Forgot Password</a>
+          </div>
+        </div>
+      </div>
+      </div>
+  <!-- login model test-->
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle " data-toggle="dropdown">Help <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Info</a></li>
+                            <li><a href="#">Another Info</a></li>
+                            <li><a href="#">More info</a></li>
+                            <li><a href="#">Extra info</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+    </nav>
+    <!-- Carousel========================================= -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="first-slide" src="http://www.horkans.ie/blog/horkans.ie/wp-content/uploads/sites/6/2016/05/ed34b0062ff11c3e81584d04ee44408be273e4d711b8124495f5_640_potato.jpg" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Give something.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab est debitis vitae, facilis architecto sequi aliquam assumenda non natus..</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Upload an item</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img class="second-slide" src="http://vignette1.wikia.nocookie.net/supermeatboy/images/0/02/Potatoboy.png/revision/latest?cb=20120407193137" alt="Second slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Request something.</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, quae!.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Upload a request</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <!-- /.carousel -->
+    <!-- Filters area -->
+    <div class="filter-container">
+        <div class="container">
+            <div class="row text-center">
+                <h2>Browse through the website for Free and Needed Stuff</h2>
+                <div class="well">
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <label>Category</label>
+                            <select id="cband" class="form-control">
+                                <option value="Potatoes">ALL CATEGORIES</option>
+                                <option value="Potatoes">Potatoes</option>
+                                <option value="Cothes">Cothes</option>
+                                <option value="iPhones">iPhones</option>
+                            </select>
+                            <input type="category" class="form-control" id="category" placeholder="Enter category">
+                        </div>
+                        <div class="form-group">
+                            <label>Area</label>
+                            <input type="city" class="form-control" id="city" placeholder="Enter city">
+                            <input type="PostalCode" class="form-control" id="PostalCode" placeholder="Enter PostalCode">
+                            <label>Distance</label>
+                            <select id="cband" class="form-control">
+                                <option value="5km">5km</option>
+                                <option value="10km">10km</option>
+                                <option value="15km">15km</option>
+                                <option value="15km">+15km</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-default">Filter</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6 col-md-offset-3">
+                <div class="btn-toolbar">
+                    <div class="btn-group btn-group-justified">
+                        <a href="#" id="" class="btn btn-default active" style="width: 33%">ALL</a>
+                        <a href="#" id="" class="btn btn-default" style="width: 34%">FREE</a>
+                        <a href="#" id="" class="btn btn-default" style="width: 33%;">Needed</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ./EO Filters area -->
+    <!-- ITEM area -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                 <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                 <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                 <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                 <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+            <div class="col-lg-4" style="padding: 20px">
+                <img class="img-circle" src="http://static.mnium.org/images/contenu/actus/Smite/UNEs/potatoboyus.png" alt="Generic placeholder image" width="140" height="140">
+                <h4>Heading</h4>
+                <p>Location</p>
+                 <a href="./user.html">Casper Potato</a>
+            </div>
+            <!-- /.col-lg-4 -->
+        </div>
+        <!-- /.row -->
+        <!-- ./EO ITEMS area -->
+        <!-- Extra info area -->
+        <hr class="divider">
+        <div class="featurette text-center">
+            <h2 class="">Some advice.</h2>
+            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="baseNav">
+                    <div class="col-xs-12 col-md-4">
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">BABY &amp; CHILDREN</span></li>
+                            <li><a href="#">Baby Care</a></li>
+                            <li><a href="#">Clothes / Shoes - Babies</a></li>
+                            <li><a href="#">Clothes / Shoes - Boys</a></li>
+                            <li><a href="#">Clothes / Shoes - Girls</a></li>
+                            <li><a href="#">Toys</a></li>
+                            <li><a href="#">School Uniforms</a></li>
+                            <li><a href="#">Student Books</a></li>
+                        </ul>
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">CLOTHING &amp; ACCESSORIES</span></li>
+                            <li><a href="#">Clothes / Maternity</a></li>
+                            <li><a href="#">Clothes / Shoes - Ladies</a></li>
+                            <li><a href="#">Clothes / Shoes - Mens</a></li>
+                            <li><a href="#">Fashion Accessories</a></li>
+                            <li><a href="#">Jewellery</a></li>
+                        </ul>
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">BOOKS, MUSIC &amp; GAMES</span></li>
+                            <li><a href="#">Books / Magazines</a></li>
+                            <li><a href="#">Games</a></li>
+                            <li><a href="#">Games / Videos</a></li>
+                            <li><a href="#">Movies / DVDs</a></li>
+                            <li><a href="#">Music</a></li>
+                            <li><a href="#">Musical Instruments</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">HOME &amp; GARDEN</span></li>
+                            <li><a href="#">Building Materials</a></li>
+                            <li><a href="#">Furniture</a></li>
+                            <li><a href="#">Garden</a></li>
+                            <li><a href="#">Home &amp; Household</a></li>
+                            <li><a href="#">Home Entertainment</a></li>
+                            <li><a href="#">Renovating</a></li>
+                            <li><a href="#">Small Appliances</a></li>
+                            <li><a href="#">Whitegoods</a></li>
+                            <li><a href="#">Tools</a></li>
+                            <li><a href="#">Outdoor</a></li>
+                        </ul>
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">ELECTRONICS &amp; COMPUTERS</span></li>
+                            <li><a href="#">Cameras</a></li>
+                            <li><a href="#">Computers</a></li>
+                            <li><a href="#">Computer Consumables</a></li>
+                            <li><a href="#">Craft</a></li>
+                            <li><a href="#">Electronics</a></li>
+                            <li><a href="#">Phones</a></li>
+                            <li><a href="#">Software &amp; Games</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <ul class="catNav">
+                            <li class="navTitle"><span class="">LIFESTYLE &amp; INTERESTS</span></li>
+                            <li><a href="#">Anything Else</a></li>
+                            <li><a href="#">Art &amp; Antiques</a></li>
+                            <li><a href="#">Automotive</a></li>
+                            <li><a href="#">Camping / Fishing</a></li>
+                            <li><a href="#">Collectables</a></li>
+                            <li><a href="#">Farm Equiptment &amp; Tools</a></li>
+                            <li><a href="#">Farm Supplies</a></li>
+                            <li><a href="#">Food</a></li>
+                            <li><a href="#">Health / Beauty</a></li>
+                            <li><a href="#">Hobbies</a></li>
+                            <li><a href="#">Industrial</a></li>
+                            <li><a href="#">Party &amp; Entertainment</a></li>
+                            <li><a href="#">Pet Supplies</a></li>
+                            <li><a href="#">Sport &amp; Excersise</a></li>
+                            <li><a href="#">Tickets &amp; Entertainment</a></li>
+                            <li><a href="#">Travel Goods</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <div class="featurette text-center">
+        <h2 class="">Important Links.</h2>
+        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+    </div>
+    </div>
+    <!-- ./EO Extra info area -->
+    <!-- Footer  -->
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4">
+                    <ul class="catNav">
+                        <li class="navTitle"><span class="">ABOUT</span></li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Join</a></li>
+                        <li><a href="#">My profile</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Help</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <ul class="catNav">
+                        <li class="navTitle"><span class="">TIPS &amp; ADVICE</span></li>
+                        <li><a href="#">Be nice</a></li>
+                        <li><a href="#">Be safe</a></li>
+                        <li><a href="#">Forum</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <ul class="catNav">
+                        <li class="navTitle"><span class="">CONSIDER</span></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Not to do</a></li>
+                    </ul>
+                    <ul class="catNav">
+                        <li class="navTitle"><span class="">FOLLOW US</span></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src='./bower_components/jquery/dist/jquery.min.js'></script>
+    <script src='./bower_components/bootstrap/dist/js/bootstrap.min.js'></script>
+</body>
+
+</html>
