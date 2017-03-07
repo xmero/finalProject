@@ -1,34 +1,40 @@
-
-.navbar-default{
-  background-color: #F1F2F2;
-}
-.nav-main{
-  display: flex;
-  justify-content: space-between;
-}
-.nav-right{
-  display: flex;
+.navbar-default {
+    background-color: #F1F2F2;
+    margin-bottom: 0px;
 }
 
-.logo{
-  height: 120px;
-  position: relative;
+.nav-main {
+    display: flex;
+    justify-content: space-between;
 }
 
-
-.list-header-button{
-  border-radius: 15px;
-  margin-right: 25px;
-  background-color: #8cc63f;
-  width: 150px;
-  height: 50px;
-  position: relative;
+.nav-right {
+    display: flex;
 }
-.banner{
-  height: 700px;
-  background: url("file://C:/Users/wazoki/Documents/projects/FinalProject/v0/img/wood.jpg") black 80% 50%;
-  background-size: cover;
-  position:relative;
+
+.logo {
+    height: 120px;
+}
+
+.logo-banner div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-header-button {
+    border-radius: 15px;
+    margin-top: 20px;
+    background-color: #8cc63f;
+    width: 150px;
+    height: 50px;
+}
+
+.banner {
+    height: 700px;
+    background: url("file://C:/Users/wazoki/Documents/projects/FinalProject/v0/img/wood.jpg") black 80% 50%;
+    background-size: cover;
+    position: relative;
+    display: flex;
 }
 
 .banner:before {
@@ -39,28 +45,59 @@
     right: 0;
     bottom: 0;
     z-index: 0;
-    background: rgba(0,0,0,0.4);
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.header-filter{
- 
- padding-top: 300px;
-position: relative;
+.header-filter {
+    padding-top: 300px;
+    position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.header-filter h2{
-  color: white;
-  margin-bottom: 25px;
+.header-filter h2 {
+    color: white;
+    margin-bottom: 25px;
 }
 
-.link-to-listing {
-  position: absolute;
-  bottom: -200px;
-  left: 50%;
+.inbanner-form > input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 20px
 }
 
-.link-to-listing a{
-  color: white;
-  font-size: 30px;
+.inbanner-form > select {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 20px
+}
+
+.inbanner-form > a {
+    font-size: 20px;
+    width: 100px;
+    padding: 9px;
+    display: inline-block;
+    border-radius: 10px;
+    background-color: #8CC63F;
+    text-decoration: none;
+    cursor: pointer;
+    cursor: hand;
+    color: white;
+}
+
+.to-listing {
+    padding-top: 15%;
+}
+
+.to-listing a {
+    color: white;
+    font-size: 30px;
+}
+
+.short-filter{
+  
 }
