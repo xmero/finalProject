@@ -1,0 +1,66 @@
+
+.navbar-default{
+  background-color: #F1F2F2;
+}
+.nav-main{
+  display: flex;
+  justify-content: space-between;
+}
+.nav-right{
+  display: flex;
+}
+
+.logo{
+  height: 120px;
+  position: relative;
+}
+
+
+.list-header-button{
+  border-radius: 15px;
+  margin-right: 25px;
+  background-color: #8cc63f;
+  width: 150px;
+  height: 50px;
+  position: relative;
+}
+.banner{
+  height: 700px;
+  background: url("file://C:/Users/wazoki/Documents/projects/FinalProject/v0/img/wood.jpg") black 80% 50%;
+  background-size: cover;
+  position:relative;
+}
+
+.banner:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+.header-filter{
+ 
+ padding-top: 300px;
+position: relative;
+    z-index: 1;
+}
+
+.header-filter h2{
+  color: white;
+  margin-bottom: 25px;
+}
+
+.link-to-listing {
+  position: absolute;
+  bottom: -200px;
+  left: 50%;
+}
+
+.link-to-listing a{
+  color: white;
+  font-size: 30px;
+}
