@@ -17,13 +17,17 @@
   display: inline-block;
   margin-left: 25%;
   margin-top: 10px;
-  color:white;
+  color:black;
   background-color: #8cc63f;
   border-radius: 10px;
   width: 150px;
   padding: 5px;
   text-align: center;
+}
 
+.photo-nav:hover{
+  color:white;
+ box-shadow: 2px 2px 25px black;
 }
 
 .product-info{
@@ -34,9 +38,14 @@ margin: 10px;
 }
 
 .btn-request{
-  color:white;
+  color:black;
   background-color: #8cc63f;
   border-radius: 10px;
   margin: 15px;
-
 }
+
+.btn-request:hover{
+  color:white;
+ box-shadow: 2px 2px 25px black;
+}
+
