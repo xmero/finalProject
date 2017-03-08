@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+.user-container{
+    background-color: #F1F2F2;
+  padding: 20px;
+  display:inline-flex;
+  flex-wrap: wrap;
+}
+
+.user-img{
+  height: 180px;
+  width:200px;
+}
+.user-info{
+  border: 1px solid black;
+}
+
