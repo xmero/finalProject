@@ -1,0 +1,28 @@
+[
+
+{
+  "id": 1,
+  "name": "item1",
+  "location":"sabadell",
+  "user": "mr potato",
+},
+{
+  "id": 2,
+  "name": "item2",
+  "location":"barcelona",
+  "user": "mr potato",
+},
+{
+  "id": 3,
+  "name": "item3",
+  "location":"sabadell",
+  "user": "mr potato",
+},
+{
+  "id": 4,
+  "name": "item4",
+  "location":"sabadell",
+  "user": "mr potato",
+}
+
+]
