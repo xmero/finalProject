@@ -5,28 +5,72 @@
     <meta charset="UTF-8">
     <title>finalProjectv1</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/details.css">
 </head>
 
 <body>
-
-<div class="container">
-    <h3>Item Name</h3>
-    <div class="row">
-      <div class="col-xs-12 col-md-5">
-    <img src="http://dawnontheamazon.com/blog/wp-content/uploads/2008/12/arequipa-market-year-of-the-potato.jpg" alt="">
+    <div class="detail">
+        <div class="row">
+            <div class="col-xs-12 col-md-5">
+                <img src="http://dawnontheamazon.com/blog/wp-content/uploads/2008/12/arequipa-market-year-of-the-potato.jpg" class="img-responsive">
+                <button class="btn photo-nav">item navigation</button>
+            </div>
+            <div class="col-xs-12 col-md-6 product-info">
+                <h3>Item Name</h3>
+                <p>Item location : </p>
+                <p>Description: </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nulla at voluptatum enim minus soluta iusto. Iusto, porro nihil quis.</p>
+                <button href="" data-target="#requestModal" data-toggle="modal" class="btn btn-request">Request this item</button>
+            </div>
+            <div class="col-xs-12 col-md-6 product-info">
+                <h3>User Name</h3>
+                <p>rating </p>
+            </div>
+        </div>
     </div>
-    <div class="col-xs-12 col-md-7">
-    <p>User : </p>
-    <p>Item location : </p>
-    <p>Description: </p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nulla at voluptatum enim minus soluta iusto. Iusto, porro nihil quis.</p>
+<!-- Login Modal -->
+       <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">List for FREE</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <form class="form" method="post" name="newRequest" id="request" ">
+                        <div class="form-group ">
+                 
+                                <input type="text " class="form-control " name="mem_name " id="mem_name " placeholder="Item name ... ">
+                         
+                        </div>
+                        <div class="form-group ">
+                 
+                                <textarea name="description " id=" " cols="30 " rows="5 " placeholder="Item description... "></textarea>
+                         
+                        </div>
+                        <div class="form-group ">
+                            <div>
+                                <div class="input-group "> <span class="input-group-addon " id="file_upload "><i class="glyphicon glyphicon-upload "></i></span>
+                              <input type="file" name="file_nm" id="file_nm" class="form-control upload" placeholder="" aria-describedby="file_upload">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </div>
+        </div>
     </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
+        <button type="button " class="btn btn-primary ">Upload</button>
+      </div>
+    </div>
+  </div>
 </div>
-    <button class="btn btn-success">Request this item</button>
-</div>
-   
-
-    
+        <!--End Of Modal -->
 
     <script src='./bower_components/jquery/dist/jquery.min.js'></script>
     <script src='./bower_components/bootstrap/dist/js/bootstrap.min.js'></script>

@@ -29,8 +29,10 @@
     border-radius: 15px;
     margin-top: 20px;
     background-color: #8cc63f;
-    width: 150px;
+    width: 200px;
     height: 50px;
+    font-size: 20px;
+    color: black;
 }
 
 .banner {
@@ -84,17 +86,18 @@
     width: 100px;
     padding: 9px;
     display: inline-block;
+    border:1px solid white;
     border-radius: 10px;
     background-color: #8CC63F;
     text-decoration: none;
     cursor: pointer;
     cursor: hand;
-    color: white;
+    color: black;
 }
 
 .inbanner-form a:hover {
     background-color: #058914;
-    color: black;
+    color: white;
 }
 
 .to-listing {
