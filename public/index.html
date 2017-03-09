@@ -6,16 +6,19 @@
     <title>SharingTree</title>
     <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+
 </head>
 
 <body> 
 
 <ng-include src="'/templates/navbar.html'"></ng-include>
 <ng-include src="'/templates/logo-banner.html'"></ng-include>
-<ng-include src="'/templates/filter-banner.html'"></ng-include>
-<ng-include src="'/templates/home.html'"></ng-include>
-<ng-include src="'/templates/footer.html'"></ng-include>
 
+<!-- <ng-include src="'/templates/home.html'"></ng-include> -->
+
+   <ng-view></ng-view>
+
+<ng-include src="'/templates/footer.html'"></ng-include>
 
     <script src='./bower_components/jquery/dist/jquery.min.js'></script>
     <script src='./bower_components/bootstrap/dist/js/bootstrap.min.js'></script>

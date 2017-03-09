@@ -3,7 +3,7 @@ angular.module("SharingTreeApp", ['ngRoute'])
 .config(function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: '/index.html',
+            templateUrl: '/templates/home.html',
             controller: 'IndexCtrl'
         })
         .when('/user', {
@@ -16,6 +16,6 @@ angular.module("SharingTreeApp", ['ngRoute'])
     $rootScope.section = 'index'
 })
 
-.controller('IndexCtrl', function($scope, $rootScope) {
+.controller('UserCtrl', function($scope, $rootScope) {
     $rootScope.section = 'user'
 })
