@@ -160,6 +160,8 @@ section {
     padding: 0px;
     border-radius: 15px;
     box-shadow: 2px 2px 25px black;
+    max-width: 300px;
+    max-height: 500px;
 }
 
 .item img {
