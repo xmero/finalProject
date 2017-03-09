@@ -10,6 +10,7 @@ html {
 .navbar-default {
     background-color: #F1F2F2;
     margin-bottom: 0px;
+    height:20px;
 }
 
 .nav-main {
@@ -24,7 +25,9 @@ html {
 .logo {
     height: 100px;
 }
-
+.logo-banner{
+height: 95px;
+}
 .logo-banner div {
     display: flex;
     justify-content: space-between;
@@ -46,7 +49,7 @@ html {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 15%;
+    padding-top: 12%;
 }
 
 .banner:before {
