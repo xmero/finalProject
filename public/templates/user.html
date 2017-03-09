@@ -1,0 +1,69 @@
+<body>
+    <div class="user-container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6 user-img">
+                <img src="https://img.clipartfest.com/471ec961029598e05277a37633b78a66_mr-potato-head-clipart-clipart-mr-potato-head_500-500.gif" class="img-responsive" draggable="false" />
+                <div class="user-rating">
+                    <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i>
+                    <a href="#">15 reviews </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6 user-data">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6">
+                        <h4>Casper Potato</h4>
+                             <p class="user-location">Sabadell City  <i class="glyphicon glyphicon-map-marker"></i></p>
+                                  <p>
+                            <i class="glyphicon glyphicon-envelope"></i> <a href="#" data-target="#messageModal" data-toggle="modal"> Send private message</a>
+                        </p>
+                        <p>
+                            <i class="glyphicon glyphicon-gift"></i><a href="#"> Items given</a>
+                        </p>
+                        <p>
+                            <i class="glyphicon glyphicon-refresh"></i><a href="#"> Items reused</a>
+                        </p>
+                    </div>
+                    <div class="col-sm-6 col-md-6 user-info">
+                        <h4>Some information </h4>
+                        <p>Here goes the description...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- Send message Modal -->
+       <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Message the user</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4">
+                                    <form class="form" method="post" name="newRequest" id="request" ">
+                        <div class="form-group ">
+                 
+                                <input type="text " class="form-control " name="mem_name " id="mem_name " placeholder="Message title... ">
+                         
+                        </div>
+                        <div class="form-group ">
+                 
+                                <textarea name="description " id=" " cols="30 " rows="5 " placeholder="Your message... "></textarea>
+                         
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
+        <button type="button " class="btn btn-primary ">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+        <!--End Of Modal -->
