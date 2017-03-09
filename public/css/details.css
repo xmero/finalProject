@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
-    font-family: 'Comfortaa', cursive;
-
+    /*font-family: 'Comfortaa', cursive;*/
+    font-family: 'Arvo', serif;
 }
 
 .detail {
@@ -46,6 +46,7 @@ box-shadow: 2px 2px 25px black;
   color:black;
   background-color: #8cc63f;
   border-radius: 10px;
+  border-color: green;
   margin: 15px;
 }
 
