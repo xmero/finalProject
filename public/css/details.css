@@ -6,15 +6,16 @@
 
 .detail {
   background-color: #F1F2F2;
-  padding: 20px;
+  padding: 5%;
 }
+
 
 .detail img{
  box-shadow: 2px 2px 25px black;
  border-radius: 15px;
  margin: 5%;
- max-width: 60%;
- max-height: 60%;
+width:100%;
+max-width: 500px;
 }
 
 .photo-nav{
@@ -37,8 +38,8 @@
 .product-info{
 border: 1px solid black;
 border-radius: 15px;
-margin: 10px;
- box-shadow: 2px 2px 25px black;
+margin: 15px;
+box-shadow: 2px 2px 25px black;
 }
 
 .btn-request{
