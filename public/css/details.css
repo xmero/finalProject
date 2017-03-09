@@ -13,6 +13,8 @@
  box-shadow: 2px 2px 25px black;
  border-radius: 15px;
  margin: 5%;
+ max-width: 60%;
+ max-height: 60%;
 }
 
 .photo-nav{
