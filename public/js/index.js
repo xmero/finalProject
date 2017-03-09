@@ -10,6 +10,10 @@ angular.module("SharingTreeApp", ['ngRoute'])
             templateUrl: '/templates/user.html',
             controller: 'UserCtrl'
         })
+                .when('/detail', {
+            templateUrl: '/templates/detail.html',
+            controller: 'DetailCtrl'
+        })
 })
 
 .controller('IndexCtrl', function($scope, $rootScope) {
@@ -18,4 +22,7 @@ angular.module("SharingTreeApp", ['ngRoute'])
 
 .controller('UserCtrl', function($scope, $rootScope) {
     $rootScope.section = 'user'
+})
+.controller('UserCtrl', function($scope, $rootScope) {
+    $rootScope.section = 'detail'
 })
