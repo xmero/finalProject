@@ -43,6 +43,15 @@ height: 95px;
     background-color: rgba(0,0,0, 0.1) ;
 }
 
+
+.google-button{
+background-color: red;
+color: white;
+padding:15px;
+text-align: center;
+border-radius: 15px;
+}
+
 .form-group input{
   padding:5px;
 }

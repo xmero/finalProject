@@ -17,7 +17,7 @@ angular.module("SharingTreeApp", ['ngRoute'])
 })
 
 .controller('IndexCtrl', function($scope, $rootScope) {
-    $rootScope.section = 'index'
+    $rootScope.section = 'home'
 })
 
 .controller('UserCtrl', function($scope, $rootScope) {
