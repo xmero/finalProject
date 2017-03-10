@@ -1,36 +1,108 @@
    <link rel="stylesheet" href="../css/user.css">
     <div class="user-container">
         <div class="row">
-            <div class="col-xs-12 col-md-6 user-img">
-                <img src="https://img.clipartfest.com/471ec961029598e05277a37633b78a66_mr-potato-head-clipart-clipart-mr-potato-head_500-500.gif" class="img-responsive" draggable="false" />
-                <div class="user-rating">
+            <div class="col-sm-6 col-md-3 col-md-offset-2 user-img">
+            <div>
+                
+                <img src="./img/user.jpeg" class="img-responsive" draggable="false" />
+            </div>
+                <div class="user-rating" ng-click="showReviews()">
                     <i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star-empty"></i><i class="glyphicon glyphicon-star-empty"></i>
-                    <a href="#">15 reviews </a>
+                    <p>15 reviews </p>
                 </div>
             </div>
-            <div class="col-xs-12 col-md-6 user-data">
+            <div class="col-sm-6 col-md-7 user-data">
                 <div class="row">
                     <div class="col-sm-6 col-md-6">
-                        <h4>Casper Potato</h4>
-                             <p class="user-location">Sabadell City  <i class="glyphicon glyphicon-map-marker"></i></p>
+                        <h4>Yuko Christain</h4>
+                             <p class="user-location">Tunisia  <i class="glyphicon glyphicon-map-marker"></i></p>
                                   <p>
-                            <i class="glyphicon glyphicon-envelope"></i> <a href="" data-target="#messageModal" data-toggle="modal"> Send private message</a>
+                            <i class="glyphicon glyphicon-envelope"></i> <a href="" data-target="#messageModal" data-toggle="modal">  Send private message</a>
                         </p>
                         <p>
-                            <i class="glyphicon glyphicon-gift"></i><a href="#"> Items given</a>
+                            <i class="glyphicon glyphicon-gift"></i>  Items given: <a href=""> 8</a> 
                         </p>
                         <p>
-                            <i class="glyphicon glyphicon-refresh"></i><a href="#"> Items reused</a>
+                            <i class="glyphicon glyphicon-refresh"></i>  Items reused: <a href=""> 15 </a>
                         </p>
                     </div>
                     <div class="col-sm-6 col-md-6 user-info">
                         <h4>Some information </h4>
-                        <p>Here goes the description...</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius consectetur, hic laboriosam nemo voluptatibus ab iusto eaque, saepe itaque ipsam sapiente perspiciatis. Repellendus, ducimus, accusamus....</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+<section>
+    <div class="row container-reviews" ng-show="reviews">
+      <div class="col-xs-6 col-md-3 "> 
+        <div class="row">
+          <div class="col-xs-12 col-md-6 review-img">
+            <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
+            <div class="review-rating"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>
+            </div>
+            <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> United Arab Emirates</p>
+          </div>
+          <div class="col-xs-12 col-md-6 user-info">
+            <h4>Review : </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt minus error perferendis consectetur dolorum animi obcaecati, nihil enim corrupti assumenda.</p>
+            <i class="glyphicon glyphicon-user"> <a href="#!/user">Donnetta Huitron</a></i>
+          </div>
+        </div>          
+      </div>
+      <div class="col-xs-6 col-md-3"> 
+        <div class="row">
+          <div class="col-xs-12 col-md-6 review-img">
+            <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
+            <div class="review-rating"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>
+            </div>
+            <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Papua New Guinea</p>
+          </div>
+          <div class="col-xs-12 col-md-6 user-info">
+            <h4>Review : </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit harum odit amet quibusdam neque cumque!</p>
+            <i class="glyphicon glyphicon-user"> <a href="#!/user">Doug Gisin</a></i>
+          </div>
+        </div>          
+      </div><div class="col-xs-6 col-md-3"> 
+        <div class="row">
+          <div class="col-xs-12 col-md-6 review-img">
+            <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
+            <div class="review-rating"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>
+            </div>
+            <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> North Korea</p>
+          </div>
+          <div class="col-xs-12 col-md-6 user-info">
+            <h4>Review : </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quaerat, necessitatibus doloribus error vel commodi aliquam sunt consequuntur nam officia?.</p>
+            <i class="glyphicon glyphicon-user"> <a href="#!/user">Richard Schlott</a></i>
+          </div>
+        </div>          
+      </div>
+      <div class="col-xs-6 col-md-3"> 
+        <div class="row">
+          <div class="col-xs-12 col-md-6 review-img">
+            <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
+            <div class="review-rating"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>
+            </div>
+            <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Madagascar</p>
+          </div>
+          <div class="col-xs-12 col-md-6 user-info">
+            <h4>Review : </h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quod eius nulla amet nisi iusto quos doloremque voluptatibus corrupti sint?</p>
+            <i class="glyphicon glyphicon-user"> <a href="#!/user">Lavinia Bohannon</a></i>
+          </div>
+        </div>          
+      </div>
+
+    </div>
+
+    </div>
+
+</section>
+
 <!-- Send message Modal -->
        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
@@ -60,8 +132,7 @@
     </div>
       </div>
       <div class="modal-footer ">
-        <button type="button " class="btn btn-default " data-dismiss="modal ">Close</button>
-        <button type="button " class="btn btn-primary ">Send</button>
+        <button type="button " class="btn btn-primary form-button ">Send</button>
       </div>
     </div>
   </div>

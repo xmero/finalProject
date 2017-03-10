@@ -2,6 +2,7 @@
     box-sizing: border-box;
     /*font-family: 'Comfortaa', cursive;*/
     font-family: 'Arvo', serif;
+     text-align: justify-all;
 }
 
 html {
@@ -50,6 +51,7 @@ height: 95px;
   padding:5px; 
   border-radius: 5px;
   border: 0.5px solid #dddbdb;
+  width: 100%;
 }
 
 .modal-footer{
