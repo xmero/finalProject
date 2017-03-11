@@ -99,7 +99,7 @@ border-radius: 15px;
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    padding-top: 12%;
+    padding-bottom: 8px;
 }
 
 .banner:before {
@@ -123,7 +123,7 @@ border-radius: 15px;
 .header-filter h2 {
     color: white;
     margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold; 
 }
 
@@ -134,14 +134,8 @@ border-radius: 15px;
     font-size: 20px
 }
 
-.inbanner-form > select {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
-    font-size: 20px
-}
 
-.inbanner-form > a {
+.filter-button a {
     font-size: 20px;
     width: 100px;
     padding: 9px;
@@ -155,7 +149,7 @@ border-radius: 15px;
     color: black;
 }
 
-.inbanner-form a:hover {
+.filter-button a:hover {
     background-color: #058914;
     color: white;
 }

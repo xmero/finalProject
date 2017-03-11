@@ -1,8 +1,6 @@
 * {
     box-sizing: border-box;
-     text-align: justify-all;
-
-
+    text-align: justify-all;
     /*font-family: 'Comfortaa', cursive;*/
     font-family: 'Arvo', serif;
 }
@@ -11,60 +9,32 @@
     background-color: #F1F2F2;
     width: 100%;
     padding-bottom: 5%;
-    display: flex;
-    flex-wrap: wrap;
-    border:1px solid black;
-    overflow-wrap: border: 1px solid black;
-    flex-direction: column;
 }
 
 .row {
     width: 100%;
 }
 
-.user-img div:first-of-type{
-    width: 200px;
-    margin-top: 50px;
-    margin-left: 8%;
-    margin-right: 5%;
-    box-shadow: 2px 2px 5px black;
-    border-radius: 30px;
-    background-color: white;
+.user-data {
+    display: flex;
+    flex-wrap: wrap;
 }
-.user-img img{
-   margin-top: 10px;
+
+.user-img img {
+    margin-top: 36px;
     border-radius: 20px;
+    width: 400px;
+    box-shadow: 2px 2px 15px grey;
 }
 
 .user-rating {
+    display: inline-flex;
     text-align: center;
-    margin-left: 8%;
-    max-width: 200px;
-    margin-top: 20px;
-    padding: 8px;
-    background-color: #058914;
-    border-radius: 10px;
-    color: white;
 }
-
-.user-rating p {
-    display:inline-flex;
-    color: white;
-
-}
-
-.user-rating:hover {
-    box-shadow: 2px 2px 15px black;
-    cursor: pointer;
-    cursor: hand;
-}
-
-
 
 .user-data {
-
     max-width: 500px;
-    margin-top: 50px;
+    margin-top: 36px;
     border: 1px solid black;
     padding: 15px;
     border-radius: 4px;
@@ -81,17 +51,14 @@
     min-height: 150px;
 }
 
-
-.container-reviews{
+.container-reviews {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-
 }
 
-
-.container-reviews > div{
+.container-reviews > div {
     min-height: 280px;
     background-color: white;
     margin: 15px;
@@ -103,28 +70,26 @@
 }
 
 .review-rating {
-  margin-left: 20%;
+    margin-left: 20%;
 }
 
-.review-img{
-margin-top: 10%;
-display: flex;
-flex-wrap: wrap;
-flex-direction: column;
-justify-content: center;
-
-
+.review-img {
+    margin-top: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.review-img img{
+.review-img img {
     box-shadow: 2px 2px 25px grey;
 }
 
-.review-img p{
+.review-img p {
     margin-top: 10%;
-  margin-left: 20%;
+    margin-left: 20%;
 }
 
-.container-reviews .user-info{
+.container-reviews .user-info {
     padding-top: 15px;
 }
