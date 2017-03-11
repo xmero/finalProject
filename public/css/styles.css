@@ -3,6 +3,7 @@
     /*font-family: 'Comfortaa', cursive;*/
     font-family: 'Arvo', serif;
      text-align: justify-all;
+     font-size: 16px;
 }
 
 html {
@@ -209,7 +210,7 @@ background-color: #F1F2F2;
     margin: 25px;
     padding: 0px;
     border-radius: 15px;
-    box-shadow: 2px 2px 25px black;
+    box-shadow: 2px 2px 20px grey;
     max-width: 300px;
     max-height: 500px;
 }
