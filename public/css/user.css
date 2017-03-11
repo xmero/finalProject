@@ -5,6 +5,11 @@
     font-family: 'Arvo', serif;
 }
 
+
+html {
+    overflow-x: hidden;
+}
+
 .user-container {
     background-color: #F1F2F2;
     width: 100%;

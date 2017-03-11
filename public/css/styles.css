@@ -28,12 +28,12 @@ html {
 .logo {
     height: 100px;
 }
-.logo-banner{
-height: 95px;
-}
+
+
 .logo-banner div {
-    display: flex;
-    justify-content: space-between;
+display: flex;
+flex-wrap: wrap; 
+    justify-content: space-around;
 }
 
 .modal-header{

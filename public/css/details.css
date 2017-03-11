@@ -5,6 +5,11 @@
     font-family: 'Arvo', serif;
 }
 
+
+html {
+    overflow-x: hidden;
+}
+
 .detail {
   background-color: #F1F2F2;
   padding: 5%;
