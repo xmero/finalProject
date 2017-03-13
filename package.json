@@ -6,7 +6,7 @@
   "scripts": {
     "prestart": "npm install",
     "dev": "nodemon app",
-     "postinstall": "./node_modules/bower/bin/bower install",
+    "postinstall": "./node_modules/bower/bin/bower install",
     "start": "node app"
   },
   "repository": {
@@ -21,7 +21,10 @@
   },
   "homepage": "https://github.com/xmero/finalProject#readme",
   "dependencies": {
+    "body-parser": "^1.17.1",
     "bower": "^1.8.0",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "mongodb": "^2.2.24",
+    "mongoose": "^4.8.7"
   }
 }

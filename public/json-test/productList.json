@@ -1,5 +1,3 @@
-[
-
 {
   "id": 1,
   "name": "item1",
@@ -15,14 +13,12 @@
 {
   "id": 3,
   "name": "item3",
-  "location":"sabadell",
+  "location":"xina",
   "user": "mr potato",
 },
 {
   "id": 4,
   "name": "item4",
-  "location":"sabadell",
+  "location":"valencia",
   "user": "mr potato",
 }
-
-]
