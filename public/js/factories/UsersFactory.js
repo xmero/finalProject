@@ -1,24 +1,24 @@
 (function() {
 
   angular.module("SharingTreeApp")
-    .factory("ProductsFactory", function($http, $routeParams) {
+    .factory("UsersFactory", function($http, $routeParams) {
 
 
-      function getProducts(){
-        var url = '/api'
+      function getUsers(){
+        var url = '/api/users'
         return $http.get(url)
                   .then( getResults )
       }
 
-      function  getDetails(id){
-        var url= `/api/${id}`
+      function  getUser(id){
+        var url= `/api/users/${id}`
          return $http.get(url)
                   .then( getResults )
       }
 
       return {
-        getProducts: getProducts,
-        getDetails: getDetails
+        getUsers: getUsers,
+        getUser: getUser,
       }
 
     })

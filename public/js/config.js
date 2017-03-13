@@ -6,11 +6,11 @@ angular.module("SharingTreeApp")
             templateUrl: '/templates/home.html',
             controller: 'HomeCtrl'
         })
-        .when('/user', {
+        .when('/users/:id', {
             templateUrl: '/templates/user.html',
             controller: 'UserCtrl'
         })
-                .when('/detail', {
+        .when('/detail/:id', {
             templateUrl: '/templates/detail.html',
             controller: 'DetailCtrl'
         })

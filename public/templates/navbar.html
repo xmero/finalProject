@@ -28,8 +28,50 @@
         </nav>
     </header>
 
+<!-- Login-TESTING Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">List for FREE</h4>
+            </div>
+        <form class="form" method="POST" name="newProduct" action="/api/users" ">
+            <div class="modal-body">
+                <div >
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div class="form-group ">
+                                <p>Enter your name:</p>
+                                <input type="text " class="form-control" name="name" placeholder="User name ... ">  
+                                <p>Location for testing:</p>
+                                <input type="text " class="form-control" name="location" placeholder="Location ... "> 
+                                <p>Write a brief description:</p>
+                                <textarea type="text " class="form-control" name="description" rows="5 " placeholder="Item description... "></textarea>
+                        </div>
+                        <div class="form-group ">
+                            <div>
+                                <p>Add a picture :</p>
+                                <div class="input-group">
+                                    <input type="file" name="picture" class="form-control upload" placeholder="" aria-describedby="file_upload"> <span class="input-group-addon" id="file_upload"><i class="glyphicon glyphicon-upload"></i></span>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="submit " class="btn btn-primary form-button">Upload</button>
+      </div>
+         </form>
+    </div>
+  </div>
+</div>
+  <!--End Of Modal -->
+
             <!-- Login Modal -->
-        <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <!-- <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -50,5 +92,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!--End Of Modal -->
+
