@@ -33,7 +33,7 @@ html {
 .logo-banner div {
 display: flex;
 flex-wrap: wrap; 
-    justify-content: space-around;
+justify-content: space-around;
 }
 
 .modal-header{
@@ -134,12 +134,14 @@ border-radius: 15px;
     font-size: 20px
 }
 
+.filter-button{
+    display:inline-flex;
+}
 
 .filter-button a {
     font-size: 20px;
     width: 100px;
     padding: 9px;
-    display: inline-block;
     border: 1px solid white;
     border-radius: 10px;
     background-color: #8CC63F;
