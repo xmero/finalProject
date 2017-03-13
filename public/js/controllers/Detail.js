@@ -1,6 +1,6 @@
 angular.module("SharingTreeApp")
 
-.controller('DetailCtrl', function($scope, $rootScope, $routeParams,ProductsFactory, UsersFactory) {
+.controller('DetailCtrl', function($scope, $rootScope, $routeParams,ProductsFactory) {
     $rootScope.section = 'detail'
     const id = $routeParams
    
