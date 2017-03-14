@@ -7,6 +7,7 @@ mongoose.Promise = global.Promise
 
 const routerUsers = require('./routes/users')
 const routerProducts = require('./routes/products')
+const routerMail = require('./routes/mail')
 
 const PORT = process.env.PORT || 3000
 const app = express()
@@ -22,6 +23,7 @@ app
   .use(express.static(publicFolder))
   .use('/products/api', routerProducts)
   .use('/users/api', routerUsers)
+  .use('/sendmail', routerMail)
 
 
   
