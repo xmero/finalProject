@@ -5,8 +5,8 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
 
-const routerProducts = require('./routes/products')
 const routerUsers = require('./routes/users')
+const routerProducts = require('./routes/products')
 
 const PORT = process.env.PORT || 3000
 const app = express()
