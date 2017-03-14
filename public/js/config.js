@@ -14,4 +14,8 @@ angular.module("SharingTreeApp")
             templateUrl: '/templates/detail.html',
             controller: 'DetailCtrl'
         })
+        .when('/usersList', {
+            templateUrl: '/templates/usersList.html',
+            controller: 'UsersListCtrl'
+        })
 })

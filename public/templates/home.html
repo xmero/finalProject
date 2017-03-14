@@ -2,7 +2,7 @@
         <section>
         {{section}}
          <div class="row item-list container">
-         <div class="col-xs-12 col-md-3 item" ng-repeat="product in products">
+         <div class="col-xs-12 col-md-3 item" ng-repeat="product in products | filter:{location: city, name: keyword}">
                     <a href="#!/detail/{{product._id}}"><img src="./img/products/vinyl1.jpg" class="img-responsive "></a>
                     <div class="container">
                         <h3>{{ product.name }}</h3>
@@ -12,104 +12,4 @@
                     </div>
                 </div>
 
-<!--       <img ng-src="{{ product.poster_path }}" /> -->
-
-           <!--  <div class="row item-list container">
-                <div class="col-xs-12 col-md-3 item">
-                    <a href="#!/detail"><img src="./img/products/vinyl1.jpg" class="img-responsive "></a>
-                    <div class="container">
-                        <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Tunisia</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Yuko Christain</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/teddybear-big.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Croatia</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Angila Swerdlow</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/sofa.jpg" width="140" height="140">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Albania</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Clair Welter</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/vinyl2.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Bosnia and Herzegovina</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Darleen Bobrosky</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/single1.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Switzerland</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Jeromy Dearstyne</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/single2.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> United Kingdom</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Sadie Baskins</a></i>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/dolphin.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Mexico</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Leonel Martsolf</a></i>
-                    </div>
-                </div><div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/piano.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> United Kingdom</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Lekisha Hulitt</a></i>
-                    </div>
-                </div><div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/bracelet.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Germany</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Sina Charpia</a></i>
-                    </div>
-                </div><div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/doll.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Djibouti</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Claudette Patriarco</a></i>
-                    </div>
-                </div><div class="col-xs-12 col-md-3 item">
-                    <img src="./img/products/vinyl3.jpg" class="img-responsive">
-                    <div class="container">
-                         <h3>NAME</h3>
-                        <p class="free-icon">FREE</p>
-                        <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Syria</p>
-                        <i class="glyphicon glyphicon-user"> <a href="#!/user">Sydney Rone</a></i>
-                    </div>
-                </div>
-            </div> -->
-           
             </section>

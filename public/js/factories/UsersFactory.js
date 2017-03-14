@@ -5,13 +5,13 @@
 
 
       function getUsers(){
-        var url = '/api/users'
+        var url = '/users/api'
         return $http.get(url)
                   .then( getResults )
       }
 
       function  getUser(id){
-        var url= `/api/users/${id}`
+        var url= `/users/api/${id}`
          return $http.get(url)
                   .then( getResults )
       }

@@ -20,8 +20,8 @@ mongoose.connect(urlDB)
 
 app
   .use(express.static(publicFolder))
-  .use('/api', routerProducts)
-  .use('/api/users', routerUsers)
+  .use('/products/api', routerProducts)
+  .use('/users/api', routerUsers)
 
 
   

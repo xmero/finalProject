@@ -5,13 +5,13 @@
 
 
       function getProducts(){
-        var url = '/api'
+        var url = '/products/api'
         return $http.get(url)
                   .then( getResults )
       }
 
       function  getDetails(id){
-        var url= `/api/${id}`
+        var url= `/products/api/${id}`
          return $http.get(url)
                   .then( getResults )
       }
