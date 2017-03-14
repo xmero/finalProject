@@ -20,7 +20,7 @@ const { name, product, location, email} = req.body
 let mailOptions = {
     from: '++++++++@gmail.com', 
     to: `${email}`,
-    subject: `Product request for ${name}`, 
+    subject: `Product request from ${name}`, 
     text: `Item requested: ${product} From: ${location} `,  
     }
 
