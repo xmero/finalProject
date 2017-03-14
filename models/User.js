@@ -8,6 +8,9 @@ const UserSchema = new mongoose.Schema({
   email: { type: String },
   rating: { type: String },
   createdAt: { type: Number, default: Date.now },
+  itemsgiven:  [mongoose.Types.ObjectId],
+  itemsrecieved:  [mongoose.Types.ObjectId],
+  reviews: [{}],
 }, { collection })
 
 module.exports = mongoose.model('User', UserSchema);

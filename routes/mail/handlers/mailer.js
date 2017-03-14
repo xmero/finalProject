@@ -9,26 +9,18 @@ module.exports = (req,res) => {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '+++++++@gmail.com',
-        pass: '++++++++++'
+        user: '++++++++@gmail.com',
+        pass: '++++++++'
     }
 });
 
-const { name, product, location, email} = req.body
-// setup email data with unicode symbols
-// let mailOptions = {
-//     from: 'komorebiapp@gmail.com', // sender address
-//     to: email , // list of receivers
-//     subject: `Product request from ${name}`, // Subject line
-//     text: 'Item requested: ${product} From: ${location}', // plain text body
-//     html: '<p>Email test one</p><ul><li>1</li><li>2</li><li>3</li><li>5</li><li>1</li></ul>'
-// };
+const { name, product, location, email, message} = req.body
 
 let mailOptions = {
     from: '++++++++@gmail.com', 
     to: `${email}`,
-    subject: `Product request for ${name}`, 
-    text: `Item requested: ${product} From: ${location} `,  
+    subject: `Product request from ${name}`, 
+    text: `Item requested: ${product} From: ${location} Message: ${message}`,  
     }
 
 console.log("Sending email")
