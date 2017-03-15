@@ -24,12 +24,12 @@ angular.module('SharingTreeApp')
 
     function register(credentials) {
       const url = '/api/register'
-      console.log("REGISTER LOLOLO")
       return $http.post(url, credentials)
         .then( $location.path("/login") )
     }
 
     function logout() {
+      console.log("WE ARE IN AUT FAILTORY")
       delete $rootScope.loggedUser
       StorageFactory.removeToken()
     }
@@ -52,25 +52,5 @@ angular.module('SharingTreeApp')
 
 
     return { login, register, logout, isLoggedIn, setCredentials }
-
-  })
-  .factory('StorageFactory', function ($window){
-
-    const store = $window.localStorage;
-    const key = 'auth-token';
-
-    function readToken() {
-      return store.getItem(key)
-    }
-
-    function saveToken(token) {
-      return !!store.setItem(key, token)
-    }
-
-    function removeToken() {
-      return store.removeItem(key)
-    }
-
-    return { readToken, saveToken, removeToken }
 
   })

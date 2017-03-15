@@ -27,15 +27,5 @@
     return response.data;
   }
 
-  // function shortenResults(products) {
-  //   console.log(products);
-  //   return products.map(function(product) {
-  //     var currentproductShortened = {
-  //       name: product.name,
-  //       img: product.img
-  //     }
-  //     return currentProductShortened;
-  //   })
-  // }
 
 })()
