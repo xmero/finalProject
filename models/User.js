@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const collection = 'users'
 
+
 const UserSchema = new mongoose.Schema({
   name: { type: String },
   location: { type: String },
@@ -8,9 +9,16 @@ const UserSchema = new mongoose.Schema({
   email: { type: String },
   rating: { type: String },
   createdAt: { type: Number, default: Date.now },
-  itemsgiven:  [mongoose.Types.ObjectId],
-  itemsrecieved:  [mongoose.Types.ObjectId],
-  reviews: [{}],
+  itemsgiven:  [ { type: String } ],
+  itemsrecieved: [ { type: String } ],
+  reviews: [ ],
 }, { collection })
+
+// {
+//     reviewer: { type: String },
+//     reviewed: { type: String },
+//     rating: { type: Number },
+//     message: { type: String },
+//   }
 
 module.exports = mongoose.model('User', UserSchema);

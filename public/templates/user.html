@@ -29,7 +29,7 @@
                 </div>
                          <p class="user-location">{{user.location}}  <i class="glyphicon glyphicon-map-marker"></i></p>
                                   <p>
-                            <i class="glyphicon glyphicon-envelope"></i> <a href="" data-target="#messageModal" data-toggle="modal">  Send private message</a>
+                            <i class="glyphicon glyphicon-envelope"></i> <a  data-target="#messageModal" data-toggle="modal">  Review user</a>
                         </p>
                         <p>
                             <i class="glyphicon glyphicon-gift"></i>  Items given: <a href=""> 8</a> 
@@ -78,7 +78,9 @@
             <i class="glyphicon glyphicon-user"> <a href="#!/user">Doug Gisin</a></i>
           </div>
         </div>          
-      </div><div class="col-xs-6 col-md-3"> 
+      </div>
+
+      <div class="col-xs-6 col-md-3"> 
         <div class="row">
           <div class="col-xs-12 col-md-6 review-img">
             <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
@@ -93,30 +95,55 @@
           </div>
         </div>          
       </div>
-      <div class="col-xs-6 col-md-3"> 
-        <div class="row">
-          <div class="col-xs-12 col-md-6 review-img">
-            <a href=""><img src="https://randomuser.me/api/portraits/men/75.jpg" class="img-responsive img-circle "></a>
-            <div class="review-rating"><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i><i class="glyphicon glyphicon-star"></i>
-            </div>
-            <p class="item-location "><i class="glyphicon glyphicon-map-marker"></i> Madagascar</p>
-          </div>
-          <div class="col-xs-12 col-md-6 user-info">
-            <h4>Review : </h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quod eius nulla amet nisi iusto quos doloremque voluptatibus corrupti sint?</p>
-            <i class="glyphicon glyphicon-user"> <a href="#!/user">Lavinia Bohannon</a></i>
-          </div>
-        </div>          
-      </div>
 
-    </div>
-
-    </div>
 
 </section>
 
+<!-- REVIEW MODAL -->
+
+ <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Message the user</h4>
+                    </div>
+                    <form class="form" method="post" name="newProduct" action="/users/api/review">
+            <div class="modal-body">
+                <div >
+                    <div class="row">
+                        <div class="col-xs-12">
+                        <div>
+                                <input type="text" class="hidden" name="reviewed" value="{{ user.name }}"> 
+                                <input type="text " class="hidden" name="id" value="{{ user._id }}"> 
+                                <p>Enter your name:</p>
+                                <input type="text " name="reviewer" placeholder="User name ... ">  
+                                <p>Scoring:</p>
+                                <input type="number " name="rating" placeholder="Rating here ... "> 
+                                <p>Write a brief message:</p>
+                                <textarea type="text" name="message" rows="5 " placeholder="Message... "></textarea>
+                        </div>
+            </div>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="submit " class="btn btn-primary form-button">Upload</button>
+      </div>
+         </form>
+        </div>
+    </div>
+      </div>
+      <div class="modal-footer ">
+        <button type="button " class="btn btn-primary form-button ">Send</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
 <!-- Send message Modal -->
-       <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <!-- <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -127,7 +154,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
-                                    <form class="form" method="post" name="newRequest" id="request" ">
+                                    <form class="form" method="GET" name="newRequest" acction="/review/:id" ">
                         <div class="form-group ">
                  
                                 <input type="text " class="form-control " name="mem_name " id="mem_name " placeholder="Message title... ">
@@ -148,5 +175,5 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
         <!--End Of Modal -->
