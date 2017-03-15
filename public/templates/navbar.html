@@ -17,6 +17,9 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav nav-right">
+                        <li ng-hide="loggedUser"><a href="#!/login">Login</a></li>
+                        <li ng-hide="loggedUser"><a href="#!/register">Register</a></li>
+                        
                         <li>
                             <a href="#" data-target="#loginModal" data-toggle="modal">Sign Up</a>
                         </li>
@@ -43,7 +46,9 @@
                         <div class="col-xs-12">
                         <div class="form-group ">
                                 <p>Enter your name:</p>
-                                <input type="text " class="form-control" name="name" placeholder="User name ... ">  
+                                <input type="text " class="form-control" name="username" placeholder="User name ... ">
+                                 <p>Password:</p>
+                                <input type="text " class="form-control" name="password" placeholder="Password ... ">   
                                 <p>Email:</p>
                                 <input type="text " class="form-control" name="email" placeholder="Email ... "> 
                                 <p>Location for testing:</p>

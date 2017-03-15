@@ -1,2 +1,2 @@
-angular.module("SharingTreeApp", ['ngRoute'])
+angular.module("SharingTreeApp", ['ngRoute','angular-jwt'])
 

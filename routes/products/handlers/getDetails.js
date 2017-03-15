@@ -7,7 +7,7 @@ module.exports = (req,res) => {
 
   Product.findById(id, function(err, product) {
         User.populate(product, {path: "owner"},function(err, product){
-            res.send(product);
+            res.json(product);
         })
         })
 }
