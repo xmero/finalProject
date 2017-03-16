@@ -15,7 +15,6 @@
       }
 
       function removeToken() {
-        console.log('REMOVEIT LOLO')
         return store.removeItem(key)
       }
 

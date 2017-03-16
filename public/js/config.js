@@ -24,19 +24,16 @@ angular.module("SharingTreeApp")
         })
 //////////////// LOGINSTEIN ROUTES
          .when('/login',{
-            templateUrl: '/partials/login.html',
+            templateUrl: '/templates/login.html',
             controller: 'LoginCtrl'
         })
         .when('/register',{
-            templateUrl: '/partials/register.html',
+            templateUrl: '/templates/register.html',
             controller: 'RegisterCtrl'
         })
         .when('/private',{
             templateUrl: '/partials/private.html',
             controller: 'PrivateCtrl',
-            resolve : {
-                'auth' : AuthFactory =>  AuthFactory.isLoggedIn()
-            }
         })
 
 
@@ -49,9 +46,14 @@ angular.module("SharingTreeApp")
         AuthFactory.setCredentials(token)
       }
 
-      $rootScope.$on('$routeChangeError', function(next, current, previous, rejection){
-          if(rejection === 'Not Authenticated'){
-              $location.path('/login');
-          }
+      $rootScope.$on('$routeChangeStart', function(next, current, previous, rejection){
+
+        if (!AuthFactory.isLoggedIn()){
+
+          $location.path('/login')
+        }
+          // if(rejection === 'Not Authenticated'){
+          //     $location.path('/login');
+          // }
       })
   })

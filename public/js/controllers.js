@@ -20,11 +20,9 @@ angular.module('SharingTreeApp')
 
     $scope.logout = function() {
       AuthFactory.logout()
-      $location.path('/private');
     }
   })
-  .controller('PrivateCtrl', function($scope, auth, DataFactory) {
-    console.log(auth)
-    DataFactory.getPrivateData()
-      .then( ({ message }) => $scope.message = message )
+
+  .controller('PrivateCtrl', function($scope) {
+    console.log("hellooo we are in private")
   })

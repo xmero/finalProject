@@ -1,16 +1,9 @@
-angular.module('SharingTreeApp')
-  .factory('DataFactory', function ($http){
+(function() {
 
-    function getPrivateData() {
-      const url = '/private'
-      return $http.get(url)
-        .then( response => response.data )
-    }
+  angular.module("SharingTreeApp")
 
-    return { getPrivateData }
 
-  })
-  .factory('AuthFactory', function($http, $q, $rootScope, $location, StorageFactory, jwtHelper) {
+    .factory('AuthFactory', function($http, $q, $rootScope, $location, StorageFactory, jwtHelper) {
 
     function login(credentials) {
       const url = '/api/login'
@@ -29,7 +22,6 @@ angular.module('SharingTreeApp')
     }
 
     function logout() {
-      console.log("WE ARE IN AUT FAILTORY")
       delete $rootScope.loggedUser
       StorageFactory.removeToken()
     }
@@ -54,3 +46,5 @@ angular.module('SharingTreeApp')
     return { login, register, logout, isLoggedIn, setCredentials }
 
   })
+
+  })()
