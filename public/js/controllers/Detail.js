@@ -9,9 +9,12 @@ angular.module("SharingTreeApp")
          $scope.product = product;
         })
 
+        if($scope.loggedUser){
+          
       UsersFactory.getUser($scope.loggedUser.id)
         .then(function(user) {
             $scope.username = user.username;
         })
+        }
 })
 
