@@ -2,8 +2,8 @@ const User = require('../../../models/User')
 
 function register(req, res) {
 
-  const { username, password } = req.body
-  const account = new User({ username })
+  const { username, password, email } = req.body
+  const account = new User({ username, email, location })
 
   User.register( account, password, err => {
     if (err) {

@@ -25,7 +25,7 @@ const publicFolder = path.join(__dirname, 'public')
 app.use( bodyParser.urlencoded({ extended: false }) )
 app.use( bodyParser.json() )
 
-const urlDB = 'mongodb://localhost:27017/fproject'
+const urlDB = process.env.DB_URI || 'mongodb://localhost:27017/fproject'
 mongoose.connect(urlDB)
 
 app

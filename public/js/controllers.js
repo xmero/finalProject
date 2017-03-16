@@ -5,7 +5,7 @@ angular.module('SharingTreeApp')
       const password = $scope.password
       AuthFactory.login({ username, password })
         .then( AuthFactory.setCredentials )
-        .then( () => $location.path('/private') )
+        .then( () => $location.path('/') )
     }
 
   })
@@ -13,16 +13,14 @@ angular.module('SharingTreeApp')
     $scope.register = function() {
       const username = $scope.username
       const password = $scope.password
-      AuthFactory.register({ username, password })
+      const email = $scope.email
+      const location = $scope.location
+      AuthFactory.register({ username, password, email, location })
     }
   })
   .controller('NavbarCtrl', function($scope, $location, AuthFactory) {
-
     $scope.logout = function() {
       AuthFactory.logout()
     }
   })
 
-  .controller('PrivateCtrl', function($scope) {
-    console.log("hellooo we are in private")
-  })

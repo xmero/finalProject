@@ -27,14 +27,10 @@
     }
 
     function isLoggedIn() {
-      try {
         const token = StorageFactory.readToken()
         if (!token) return false
         const tokenPayload = jwtHelper.decodeToken( token )
         return !( jwtHelper.isTokenExpired( token ) )
-      } catch( e ) {
-        return $q.reject('Not Authenticated')
-      }
     }
 
     function setCredentials( token ) {

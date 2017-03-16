@@ -12,7 +12,8 @@ angular.module("SharingTreeApp")
         })
         .when('/users/:id', {
             templateUrl: '/templates/user.html',
-            controller: 'UserCtrl'
+            controller: 'UserCtrl',
+            secure: true
         })
         .when('/detail/:id', {
             templateUrl: '/templates/detail.html',
@@ -20,9 +21,10 @@ angular.module("SharingTreeApp")
         })
         .when('/usersList', {
             templateUrl: '/templates/usersList.html',
-            controller: 'UsersListCtrl'
+            controller: 'UsersListCtrl',
+            secure: true
         })
-//////////////// LOGINSTEIN ROUTES
+
          .when('/login',{
             templateUrl: '/templates/login.html',
             controller: 'LoginCtrl'
@@ -31,9 +33,17 @@ angular.module("SharingTreeApp")
             templateUrl: '/templates/register.html',
             controller: 'RegisterCtrl'
         })
+        //////////////// LOGINSTEIN ROUTES
         .when('/private',{
-            templateUrl: '/partials/private.html',
+            templateUrl: '/templates/private.html',
             controller: 'PrivateCtrl',
+            secure: true
+        })
+
+        .when('/postitem', {
+            templateUrl: '/templates/post-items.html',
+            controller: 'AddProductCtrl',
+            secure: true
         })
 
 
@@ -46,14 +56,12 @@ angular.module("SharingTreeApp")
         AuthFactory.setCredentials(token)
       }
 
-      $rootScope.$on('$routeChangeStart', function(next, current, previous, rejection){
+      $rootScope.$on('$routeChangeStart', function (event, next, current) {
 
-        if (!AuthFactory.isLoggedIn()){
-
-          $location.path('/login')
+        if(next && next.secure){
+          if ( !AuthFactory.isLoggedIn() ){
+            $location.path('/login')
+          }
         }
-          // if(rejection === 'Not Authenticated'){
-          //     $location.path('/login');
-          // }
       })
   })

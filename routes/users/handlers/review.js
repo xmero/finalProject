@@ -16,6 +16,6 @@ module.exports = (req,res) => {
     },
     {safe: true, upsert: true, new : true}
   )
-    .then( user => res.redirect("/") )
+    .then( user => res.redirect(`/#!/users/${id}`) )
     .catch( err => { throw err })
 }

@@ -11,15 +11,15 @@ const UserSchema = new mongoose.Schema({
   createdAt: { type: Number, default: Date.now },
   itemsgiven:  [ { type: String } ],
   itemsrecieved: [ { type: String } ],
-  reviews: [ ],
+  reviews: [ {
+    reviewer: { type: String },
+    reviewed: { type: String },
+    rating: { type: Number },
+    message: { type: String },
+  } ],
 }, { collection })
 
-// {
-//     reviewer: { type: String },
-//     reviewed: { type: String },
-//     rating: { type: Number },
-//     message: { type: String },
-//   }
+
 
 UserSchema.plugin( passportLocalMongoose );
 
