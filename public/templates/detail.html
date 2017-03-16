@@ -35,7 +35,7 @@
                         <div class="container">
                             <div class="row">
                                 <div class="col-xs-12 col-sm-4">
-                                <input type="text" name="name" placeholder="Your Name" ">
+                               
                                 <textarea name="message"  cols="30 " rows="5 " placeholder="Hello, my name is ... and I'd like to have this item because ... "></textarea>
             </div>
         </div>
@@ -43,7 +43,7 @@
       </div>
       <div class="modal-footer ">
         <!-- <button type="button " class="btn btn-primary form-button">Request</button> -->
-                
+                     <input type="hidden" name="name" value="{{ username }}" ">
                   <input type="hidden" name="email" value="{{ product.owner.email }}">
                 <input type="hidden" name="product" value="{{ product.name }}">
                 <input type="hidden" name="location" value="{{ product.location }}">
