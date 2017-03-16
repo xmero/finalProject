@@ -15,7 +15,6 @@ angular.module("SharingTreeApp")
 
     UsersFactory.getUser(id.id)
         .then(function(user) {
-            console.log(user)
             $scope.user = user;
         })
 })
