@@ -9,15 +9,15 @@ module.exports = (req,res) => {
 let transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '+++++++++@gmail.com',
-        pass: '+++++++++'
+        user: process.env.EMAILER,
+        pass: process.env.EMAIL_PASS
     }
 });
 
 const { name, product, location, email, message} = req.body
 
 let mailOptions = {
-    from: '+++++++++@gmail.com', 
+    from: process.env.EMAILER, 
     to: `${email}`,
     subject: `Product request from ${name}`, 
     text: `Item requested: ${product} From: ${location} Message: ${message}`,  
