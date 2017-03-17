@@ -23,6 +23,12 @@
                   .then( getResults )
       }
 
+      function getProducts(id){
+        var url = `/products/api/myitems/${id}`
+        return $http.get(url)
+                  .then( getResults )
+      }
+
       function  deleteUser(id){
         var url= `/private/remove/${id}`
          return $http.post(url)
@@ -34,6 +40,7 @@
         getUser: getUser,
         editUser: editUser,
         deleteUser: deleteUser,
+        getProducts: getProducts
       }
 
     })

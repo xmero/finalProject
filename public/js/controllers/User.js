@@ -17,4 +17,10 @@ angular.module("SharingTreeApp")
         .then(function(user) {
             $scope.user = user;
         })
+
+    UsersFactory.getProducts(id.id)
+        .then(function(products) {
+            console.log(products)
+            $scope.products = products;
+        })
 })

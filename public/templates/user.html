@@ -47,6 +47,18 @@
         </div>
     </div>
 
+    <!-- PRODUCTS TEST -->
+         <div class="row item-list container">
+         <div class="col-xs-12 col-md-3 product-info item" ng-repeat="product in products">
+                 <img src="./img/products/vinyl1.jpg" class="img-responsive">
+                <h3>{{ product.name }}</h3>
+                <p>Item location :  <span class="item-location "> {{ product.location }}</span>
+                <p>Description: </p></p>
+                <p>{{ product.description }}</p>
+            </div>
+                </div>
+    <!-- EO PRODUCTS TEST -->
+
 <section>
 
     <div class="row" ng-show="reviews">
