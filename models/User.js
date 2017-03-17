@@ -7,8 +7,10 @@ const UserSchema = new mongoose.Schema({
   location: { type: String },
   description: { type: String },
   email: { type: String },
+  image: { type: String, default: "https://d1fy1ym40biffm.cloudfront.net/images/default-avatar.png" },
   rating: { type: String },
   createdAt: { type: Number, default: Date.now },
+  updatedAt: { type: Number },
   itemsgiven:  [ { type: String } ],
   itemsrecieved: [ { type: String } ],
   reviews: [ {

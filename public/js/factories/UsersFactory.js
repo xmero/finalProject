@@ -16,9 +16,18 @@
                   .then( getResults )
       }
 
+      function  editUser(id, username, email, location, description, image ){
+        const data ={ username, email, location, description, image }
+        console.log(data)
+        var url= `/private/edit/${id}`
+         return $http.put(url, data)
+                  .then( getResults )
+      }
+
       return {
         getUsers: getUsers,
         getUser: getUser,
+        editUser: editUser,
       }
 
     })
@@ -26,6 +35,5 @@
   function getResults(response) {
     return response.data;
   }
-
 
 })()
