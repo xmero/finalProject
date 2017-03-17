@@ -18,9 +18,14 @@
 
       function  editUser(id, username, email, location, description, image ){
         const data ={ username, email, location, description, image }
-        console.log(data)
         var url= `/private/edit/${id}`
          return $http.put(url, data)
+                  .then( getResults )
+      }
+
+      function  deleteUser(id){
+        var url= `/private/remove/${id}`
+         return $http.post(url)
                   .then( getResults )
       }
 
@@ -28,6 +33,7 @@
         getUsers: getUsers,
         getUser: getUser,
         editUser: editUser,
+        deleteUser: deleteUser,
       }
 
     })

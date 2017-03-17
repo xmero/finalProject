@@ -1,6 +1,6 @@
 angular.module("SharingTreeApp")
 
-.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory,$location) {
+.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory,$location, StorageFactory ) {
     $rootScope.section = 'private'
     const id = $scope.loggedUser.id
 
@@ -24,6 +24,15 @@ angular.module("SharingTreeApp")
         .then( () => $location.path('/') )
     }
 
+    $scope.deleteUser = (e) => {
+      e.preventDefault()
+      UsersFactory.deleteUser(id)
+        .then (() => $location.path('/'))
+        .then(() => {
+          delete $rootScope.loggedUser
+          StorageFactory.removeToken()
+    })
+    }
 
 })
 

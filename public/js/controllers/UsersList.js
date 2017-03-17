@@ -6,5 +6,6 @@ angular.module("SharingTreeApp")
        .then( function(users) {
         $scope.users = users;
        })
+
 })
 
