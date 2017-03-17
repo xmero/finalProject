@@ -1,6 +1,6 @@
 angular.module("SharingTreeApp")
 
-.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory) {
+.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory,$location) {
     $rootScope.section = 'private'
     const id = $scope.loggedUser.id
 
@@ -21,6 +21,7 @@ angular.module("SharingTreeApp")
         .then(function(user) {
           $scope.user = user;
       })
+        .then( () => $location.path('/') )
     }
 
 
