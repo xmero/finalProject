@@ -14,6 +14,12 @@ angular.module("SharingTreeApp")
             $scope.location = user.location
         })
 
+    UsersFactory.getProducts(id)
+        .then(function(products) {
+            console.log(products)
+            $scope.products = products;
+        })
+
     $scope.editUser = (e) => {
       e.preventDefault()
       const { username, email, location, description, image } = $scope

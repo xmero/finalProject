@@ -2,7 +2,7 @@
         <section>
          <div class="row item-list container">
          <div class="col-xs-12 col-md-3 item" ng-repeat="product in products | filter:{location: city, name: keyword}">
-                    <a href="#!/detail/{{product._id}}"><img src="./img/products/vinyl1.jpg" class="img-responsive "></a>
+                    <a href="#!/detail/{{product._id}}"><img src="{{ product.image }}" class="img-responsive "></a>
                     <div class="container">
                         <h3>{{ product.name }}</h3>
                         <p class="free-icon">FREE</p>

@@ -1,8 +1,10 @@
 const User = require('../../../models/User')
-
+const Product = require('../../../models/Product')
 module.exports = (req,res) => {
 
   const id = req.params.id
+
+Product.remove( { owner: id }, ()=>{
 
   User.findByIdAndRemove  ( id )
     .then( user => {
@@ -11,5 +13,6 @@ module.exports = (req,res) => {
     })
     .catch( err => res.status(500).json(err) )
 
+})
 }
 

@@ -1,6 +1,10 @@
-<h1>{{ user.username }} edit area</h1>
+<section>
+  
 
-<div class="text-center container">
+<h1>{{ user.username }} edition area</h1>
+
+<div class= "row">
+<div class="text-center col-md-3">
 
       <h3>Update User Data</h3>
       <form role="form" ng-submit='editUser($event)'>
@@ -28,7 +32,7 @@
           Edit
         </button>
       </form>
-      <div style="margin-left: 400px">
+      <div >
       <form  role="form" ng-submit='deleteUser($event)'>
          <button type="submit"  class="btn btn btn-danger">
           Delete User
@@ -36,3 +40,18 @@
       </form>
       </div>
     </div>
+    <div class="text-center col-md-9>
+    <div class="row item-list container">
+         <div class="col-xs-12 col-md-3 product-info item" ng-repeat="product in products">
+                 <img src="{{ product.image }}" class="img-responsive">
+                <h3>{{ product.name }}</h3>
+                <p>Item location :  <span class="item-location "> {{ product.location }}</span>
+                <p>Description: </p></p>
+                <p>{{ product.description }}</p>
+                <button>edit</button>
+            </div>
+                </div>
+  
+    </div>
+    </div>
+    </section>

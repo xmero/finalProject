@@ -50,7 +50,7 @@
     <!-- PRODUCTS TEST -->
          <div class="row item-list container">
          <div class="col-xs-12 col-md-3 product-info item" ng-repeat="product in products">
-                 <img src="./img/products/vinyl1.jpg" class="img-responsive">
+                 <img src="{{ product.image }}" class="img-responsive">
                 <h3>{{ product.name }}</h3>
                 <p>Item location :  <span class="item-location "> {{ product.location }}</span>
                 <p>Description: </p></p>
