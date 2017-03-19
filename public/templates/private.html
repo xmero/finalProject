@@ -42,13 +42,21 @@
     </div>
     <div class="text-center col-md-9">
     <div class="row item-list container">
-         <div class="col-xs-12 col-md-3 product-info item" ng-repeat="product in products">
+         <div class="col-xs-12 col-md-3 product-info item container" ng-repeat="product in products">
                  <img src="{{ product.image }}" class="img-responsive">
-                <h3>{{ product.name }}</h3>
-                <p>Item location :  <span class="item-location "> {{ product.location }}</span>
-                <p>Description: </p></p>
-                <p>{{ product.description }}</p>
-                <button class="btn btn-info">Edit</button>
+                <h3 ng-hide="editMode">{{ product.name }}</h3>
+                <input type="text" ng-show="editMode" ng-model="product.name">
+                <p>Location:</p>
+                <p ng-hide="editMode">{{ product.location }}</p>
+                <input type="text" ng-show="editMode" ng-model="product.location">
+                <p>Description: </p>
+                <textarea type="text" ng-show="editMode" ng-model="product.description"></textarea>
+                <p ng-hide="editMode">{{ product.description }}</p>
+                <p ng-show="editMode">Image:</p>
+                <input type="text" ng-show="editMode" ng-model="product.image">
+                
+                <button ng-hide="editMode" ng-click="editMode = true" class="btn btn-info">Edit</button>
+                <button ng-show="editMode" ng-click="editMode = false ; editProduct($event, product)" class="btn btn-info">Done</button>
             <form  role="form" ng-submit='deleteProduct($event, product._id)'>
           <button type="submit"  class="btn btn btn-danger">
           Delete

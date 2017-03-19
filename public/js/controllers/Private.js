@@ -15,7 +15,6 @@ angular.module("SharingTreeApp")
 
     UsersFactory.getProducts(id)
         .then(function(products) {
-            console.log(products)
             $scope.products = products;
         })
 
@@ -26,7 +25,17 @@ angular.module("SharingTreeApp")
         .then(function(user) {
           $scope.user = user;
       })
-        .then( () => $location.path('/') )
+        .then( () => window.location.reload() )
+    }
+
+    $scope.editProduct = (e, product) => {
+      e.preventDefault()
+      const { name, location, description, image, _id} = product
+      ProductsFactory.editProduct(_id, name, location, description, image)
+        .then(function(product) {
+          $scope.product = product;
+      })
+        .then( () => window.location.reload() )
     }
 
     $scope.deleteProduct = (e, pid) => {

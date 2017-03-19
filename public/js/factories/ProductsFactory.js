@@ -16,6 +16,13 @@
                   .then( getResults )
       }
 
+      function  editProduct(id, name, location, description, image ){
+        const data ={ name, location, description, image }
+        var url= `/private/editProduct/${id}`
+         return $http.put(url, data)
+                  .then( getResults )
+      }
+
       function  deleteProduct(id){
         var url= `/products/api/delete/${id}`
          return $http.get(url)
@@ -25,7 +32,8 @@
       return {
         getProducts: getProducts,
         getDetails: getDetails,
-        deleteProduct: deleteProduct
+        deleteProduct: deleteProduct,
+        editProduct: editProduct,
       }
 
     })

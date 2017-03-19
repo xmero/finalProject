@@ -20,7 +20,6 @@ angular.module("SharingTreeApp")
 
     UsersFactory.getProducts(id.id)
         .then(function(products) {
-            console.log(products)
             $scope.products = products;
         })
 })
