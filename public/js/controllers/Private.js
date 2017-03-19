@@ -35,7 +35,6 @@ angular.module("SharingTreeApp")
         .then(function(product) {
           $scope.product = product;
       })
-        .then( () => window.location.reload() )
     }
 
     $scope.deleteProduct = (e, pid) => {
