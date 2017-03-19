@@ -1,6 +1,5 @@
 angular.module("SharingTreeApp")
-
-.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory,$location, StorageFactory ) {
+.controller('PrivateCtrl', function($scope, $rootScope, UsersFactory,$location, StorageFactory, ProductsFactory ) {
     $rootScope.section = 'private'
     const id = $scope.loggedUser.id
 
@@ -28,6 +27,12 @@ angular.module("SharingTreeApp")
           $scope.user = user;
       })
         .then( () => $location.path('/') )
+    }
+
+    $scope.deleteProduct = (e, pid) => {
+      e.preventDefault()
+      ProductsFactory.deleteProduct(pid)
+        .then( () => window.location.reload() )
     }
 
     $scope.deleteUser = (e) => {

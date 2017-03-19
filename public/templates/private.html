@@ -28,7 +28,7 @@
           <label>Image url:</label>
           <input type="text" class="form-control" ng-model="image">
         </div>
-        <button type="submit" class="btn btn btn-primary">
+        <button type="submit" class="btn btn-info">
           Edit
         </button>
       </form>
@@ -40,7 +40,7 @@
       </form>
       </div>
     </div>
-    <div class="text-center col-md-9>
+    <div class="text-center col-md-9">
     <div class="row item-list container">
          <div class="col-xs-12 col-md-3 product-info item" ng-repeat="product in products">
                  <img src="{{ product.image }}" class="img-responsive">
@@ -48,7 +48,11 @@
                 <p>Item location :  <span class="item-location "> {{ product.location }}</span>
                 <p>Description: </p></p>
                 <p>{{ product.description }}</p>
-                <button>edit</button>
+                <button class="btn btn-info">Edit</button>
+            <form  role="form" ng-submit='deleteProduct($event, product._id)'>
+          <button type="submit"  class="btn btn btn-danger">
+          Delete
+            </button>
             </div>
                 </div>
   

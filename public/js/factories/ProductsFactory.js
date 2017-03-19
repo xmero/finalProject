@@ -16,9 +16,16 @@
                   .then( getResults )
       }
 
+      function  deleteProduct(id){
+        var url= `/products/api/delete/${id}`
+         return $http.get(url)
+                  .then( getResults )
+      }
+
       return {
         getProducts: getProducts,
-        getDetails: getDetails
+        getDetails: getDetails,
+        deleteProduct: deleteProduct
       }
 
     })
