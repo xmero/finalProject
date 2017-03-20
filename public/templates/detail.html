@@ -60,7 +60,7 @@
        <div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
-                <form class="form" ng-submit='addMessage($event)' >
+                <form class="form" ng-submit='addMessage($event); sendEmail($event)' >
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                         <h4 class="modal-title" id="myModalLabel">Send Message</h4>

@@ -5,7 +5,8 @@
           <th>From</th>
           <th>Subject</th>
           <th>Body</th>
-          <th>Recieved</th>
+          <th ng-if="message.sender === loggedUser.id">Recieved</th>
+          <th ng-if="message.sender != loggedUser.id">Sent</th>
       </tr>
   </thead>
   <tbody>
@@ -23,7 +24,8 @@
           <p >{{message.timestamp}}</p>
         </td>
         <td>
-          <button data-target="#messageModal" data-toggle="modal" class="btn btn-request">Answer</button>
+          <button  ng-if="message.sender != loggedUser.id" data-target="#messageModal" data-toggle="modal" class="btn btn-request">Answer</button>
+          <button  ng-if="message.sender === loggedUser.id" data-target="#messageModal" data-toggle="modal" class="btn btn-request">Send message</button>
         </td>
         <td>
           <a href="#!/messages/{{message.recipient}}" ng-click="editMessage(message._id)" >Mark as Unread</a>

@@ -4,14 +4,15 @@
       <option value="read">Read</option>
       <option value="not">Unread</option>
     </select>
-<button ng-click="getSentMessages(message._id)">Sent</button>
-<button ng-click="getMessages(message._id)">Recieved</button>
+<button ng-click="getSentMessages(message._id); viewSent = true">Sent</button>
+<button ng-click="getMessages(message._id); viewSent = false">Recieved</button>
   <thead>
       <tr>
           <th>From</th>
           <th>Subject</th>
           <th>Body</th>
-          <th>Received</th>
+          <th ng-hide="viewSent">Received</th>
+          <th ng-show="viewSent">Sent</th>
       </tr>
   </thead>
   <tbody>

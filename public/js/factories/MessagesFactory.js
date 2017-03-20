@@ -15,6 +15,13 @@
                   .then( getResults )
       }
 
+      function sendEmail( name, product, location, email, messageBody){
+        var url='/sendmail'
+        var data = { name, product, location, email, messageBody }
+        return $http.post(url, data)
+          .then(console.log('Email Sent from the factory'))
+      }
+
 
       function  getMessageDetails(id){
         var url= `/messages/details/${id}`
@@ -41,7 +48,8 @@
         getSentMessages:getSentMessages,
         addMessage: addMessage,
         getMessageDetails:getMessageDetails,
-        editMessage:editMessage
+        editMessage:editMessage,
+        sendEmail:sendEmail
       }
 
     })
