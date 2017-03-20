@@ -30,6 +30,9 @@
         <td>
           <a href="#!/messages/{{message.recipient}}" ng-click="editMessage(message._id)" >Mark as Unread</a>
         </td>
+        <td>
+          <a href="#!/messages/{{message.recipient}}" ng-click="deleteMessage(message._id)" class="btn btn-danger" >DELETE</a>
+        </td>
     </tr>
   </tbody>
 </table>

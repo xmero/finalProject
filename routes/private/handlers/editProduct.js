@@ -3,10 +3,10 @@ const Product = require('../../../models/Product')
 module.exports = (req,res) => {
 
   const id = req.params.id
-  let { name, location, description, image } = req.body
+  let { name, location, description, image, free, postalCode } = req.body
   const updatedAt = Date.now()
 
-  Product.findByIdAndUpdate  ( id,  {name, location, description, image, updatedAt } )
+  Product.findByIdAndUpdate  ( id,  {name, location, description, image, free, postalCode, updatedAt } )
     .then( product => {
       console.log('Product has been updated succesfully')
       res.json(product) 

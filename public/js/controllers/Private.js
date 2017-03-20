@@ -30,8 +30,8 @@ angular.module("SharingTreeApp")
 
     $scope.editProduct = (e, product) => {
       e.preventDefault()
-      const { name, location, description, image, _id} = product
-      ProductsFactory.editProduct(_id, name, location, description, image)
+      const { name, location, description, image, _id, free, postalCode} = product
+      ProductsFactory.editProduct(_id, name, location, description, image, free, postalCode)
         .then(function(product) {
           $scope.product = product;
       })

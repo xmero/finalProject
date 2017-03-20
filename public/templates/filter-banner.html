@@ -5,7 +5,7 @@
                     <form class="inbanner-form">
                         <input type="category" id="category" placeholder="Keyword/category" ng-model="$parent.keyword">
                         <input type="city" id="city" placeholder="Enter city" ng-model="$parent.city">
-                        <input type="PostalCode" id="PostalCode" placeholder="Enter PostalCode">
+                        <input type="postalCode" id="postalCode" placeholder="Enter PostalCode" ng-model="$parent.postalCode">
                     <div class="filter-button">
                         <a type="submit" class="">GO!</a>
                     </div>
@@ -15,11 +15,11 @@
         <nav class="row short-filter">
             <div class="col-xs-12 col-md-6 col-md-offset-3" id="product-list">
                 <div class=" btn-group-justified">
-                    <a href="#product-list" class="btn btn-default">ALL
+                    <a ng-click="$parent.status = ''" class="btn btn-default">ALL
                         </a>
-                    <a href="#product-list" class="btn btn-default">FREE
+                    <a ng-click="$parent.status = 'free'" class="btn btn-default">FREE
                         </a>
-                    <a href="#product-list" class="btn btn-default">Needed
+                    <a ng-click="$parent.status = 'given'" class="btn btn-default">Given
                         </a>
                 </div>
             </div>

@@ -36,5 +36,12 @@ angular.module("SharingTreeApp")
             })
           }
 
+        $scope.deleteMessage = (e) => {
+            MessagesFactory.deleteMessage(id.id)
+            .then(()=>{
+              console.log('Message deleted!')
+            })
+        }
+
 
 })

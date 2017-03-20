@@ -42,16 +42,30 @@
       </div>
     </div>
     <div class="text-center col-md-9">
-    <div class="row item-list container">
-         <div class="col-xs-12 col-md-3 product-info item container" ng-repeat="product in products">
+    <div class="row container">
+         <div class="col-xs-12 col-md-3 product-info container" ng-repeat="product in products">
                  <img src="{{ product.image }}" class="img-responsive">
-                <h3 ng-hide="editMode">{{ product.name }}</h3>
+                <p ng-show="editMode">Status: </p>
+                <div ng-show="editMode">
+                 <select  type="text" ng-model="product.free">
+                  <option selected="selected" value='free'>Free</option>
+                  <option value="reserved">Reserved</option>
+                  <option value="given">Given</option>
+                </select>
+                </div>
+                <p>Name: </p>
+                <h4 ng-hide="editMode">{{ product.name }}</h4>
                 <input type="text" ng-show="editMode" ng-model="product.name">
                 <p>Location:</p>
                 <p ng-hide="editMode">{{ product.location }}</p>
                 <input type="text" ng-show="editMode" ng-model="product.location">
+                <p>PostalCode:</p>
+                <p ng-hide="editMode">{{ product.postalCode }}</p>
+                <input type="text" ng-show="editMode" ng-model="product.postalCode">
                 <p>Description: </p>
-                <textarea type="text" ng-show="editMode" ng-model="product.description"></textarea>
+                <div ng-show="editMode">  
+                <textarea type="text"  ng-model="product.description"></textarea>
+                </div>
                 <p ng-hide="editMode">{{ product.description }}</p>
                 <p ng-show="editMode">Image:</p>
                 <input type="text" ng-show="editMode" ng-model="product.image">

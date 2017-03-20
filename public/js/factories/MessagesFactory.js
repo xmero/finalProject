@@ -43,13 +43,20 @@
                   .then( getResults )
       }
 
+      function  deleteMessage(id){
+        var url= `/messages/${id}`
+         return $http.post(url)
+                  .then( console.log('Message removed succesfully.') )
+      }
+
       return {
         getMessages:getMessages,
         getSentMessages:getSentMessages,
         addMessage: addMessage,
         getMessageDetails:getMessageDetails,
         editMessage:editMessage,
-        sendEmail:sendEmail
+        sendEmail:sendEmail,
+        deleteMessage:deleteMessage
       }
 
     })

@@ -31,5 +31,4 @@ angular.module("SharingTreeApp")
         .then(() => console.log('Message marked as readed'))
         }
 
-
 })

@@ -16,8 +16,8 @@
                   .then( getResults )
       }
 
-      function  editProduct(id, name, location, description, image ){
-        const data ={ name, location, description, image }
+      function  editProduct(id, name, location, description, image, free, postalCode ){
+        const data ={ name, location, description, image, free, postalCode }
         var url= `/private/editProduct/${id}`
          return $http.put(url, data)
                   .then( getResults )
