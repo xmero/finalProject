@@ -18,9 +18,5 @@ angular.module('SharingTreeApp')
       AuthFactory.register({ username, password, email, location })
     }
   })
-  .controller('NavbarCtrl', function($scope, $location, AuthFactory) {
-    $scope.logout = function() {
-      AuthFactory.logout()
-    }
-  })
+
 

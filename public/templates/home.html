@@ -1,7 +1,7 @@
       <ng-include src="'/templates/filter-banner.html'"></ng-include>
         <section>
          <div class="row item-list container">
-         <div class="col-xs-12 col-md-3 item" ng-repeat="product in products | filter:{location: city, name: keyword, postalCode: postalCode, free: status}">        
+         <div class="col-xs-12 col-md-3 item" ng-repeat="product in products | filter:{ location: city, name: keyword, postalCode: CP, free: status }">        
                     <a href="#!/detail/{{product._id}}"><img src="{{ product.image }}" class="img-responsive "></a>
                     <div class="container">
                         <h3>{{ product.name }}</h3>
