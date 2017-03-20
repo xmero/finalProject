@@ -9,6 +9,13 @@
                   .then( getResults )
       }
 
+        function  getSentMessages(id){
+        var url= `/messages/sent/${id}`
+         return $http.get(url)
+                  .then( getResults )
+      }
+
+
       function  getMessageDetails(id){
         var url= `/messages/details/${id}`
          return $http.get(url)
@@ -31,6 +38,7 @@
 
       return {
         getMessages:getMessages,
+        getSentMessages:getSentMessages,
         addMessage: addMessage,
         getMessageDetails:getMessageDetails,
         editMessage:editMessage

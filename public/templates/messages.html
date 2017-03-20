@@ -4,6 +4,8 @@
       <option value="read">Read</option>
       <option value="not">Unread</option>
     </select>
+<button ng-click="getSentMessages(message._id)">Sent</button>
+<button ng-click="getMessages(message._id)">Recieved</button>
   <thead>
       <tr>
           <th>From</th>
@@ -13,7 +15,7 @@
       </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="message in messages | filter:{status: status}" >
+    <tr ng-repeat="message in messages | filter:{status: status }" >
       <td>
         <p>{{message.from}}</p>
       </td>
