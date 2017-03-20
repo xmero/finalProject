@@ -13,6 +13,7 @@ mongoose.Promise = global.Promise
 const routerUsers = require('./routes/users')
 const routerProducts = require('./routes/products')
 const routerMail = require('./routes/mail')
+const routerMessaging = require('./routes/messaging')
 
 const routesAuth = require('./routes/auth')
 const routesPrivate = require('./routes/private')
@@ -33,6 +34,7 @@ app
 
   .use('/api', routesAuth )
   .use('/private', routesPrivate )
+  .use('/messages', routerMessaging)
 
   .use('/products/api', routerProducts)
   .use('/users/api', routerUsers)

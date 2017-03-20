@@ -46,6 +46,18 @@ angular.module("SharingTreeApp")
             secure: true
         })
 
+        .when('/messages/:id', {
+            templateUrl: '/templates/messages.html',
+            controller: 'MessagesCtrl',
+            secure: true
+        })
+
+        .when('/messages/view/:id', {
+            templateUrl: '/templates/message-view.html',
+            controller: 'MessagesViewCtrl',
+            secure: true
+        })
+
 
 })
 

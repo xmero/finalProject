@@ -7,7 +7,7 @@ const ProductSchema = new Schema({
   name: { type: String },
   location: { type: String },
   username: { type: String },
-  image: { type: String, default: "http://wonkville.net/wp-content/uploads/2016/04/No-image-available.jpg" },
+  image: { type: String, default: "https://www.maciverse.com/wp-content/themes/maciversev2/images/default-thumb.png" },
   description: { type: String },
   free: { type: Boolean, default: true },
   createdAt: { type: Number, default: Date.now },

@@ -25,6 +25,9 @@
                         <li ng-show="loggedUser">
                             <a  href="#!/private">Edit Profile</a>
                         </li> 
+                        <li ng-show="loggedUser">
+                            <a  href="#!/messages/{{loggedUser.id}}">Messages</a>
+                        </li>
                     </ul>
                 </div>
             </div>

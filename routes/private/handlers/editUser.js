@@ -3,7 +3,7 @@ const User = require('../../../models/User')
 module.exports = (req,res) => {
 
   const id = req.params.id
-  let { username, email, location, description, image } = req.body
+  const { username, email, location, description, image } = req.body
   const updatedAt = Date.now()
 
   User.findByIdAndUpdate  ( id,  { username, email, location, description, image ,updatedAt } )
