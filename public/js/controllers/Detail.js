@@ -21,10 +21,9 @@ angular.module("SharingTreeApp")
         e.preventDefault()
         const name = $scope.username
         const product = $scope.product.name
-        const location = $scope.product.owner.location
         const email = $scope.product.owner.email
         const messageBody = $scope.messageBody
-        MessagesFactory.sendEmail(name, product, location, email, messageBody)
+        MessagesFactory.sendEmail(name, product, email, messageBody)
           .then(()=>{
             console.log('Email sent from the controller')
           })

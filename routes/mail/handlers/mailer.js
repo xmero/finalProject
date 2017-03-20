@@ -14,13 +14,13 @@ let transporter = nodemailer.createTransport({
     }
 });
 
-const { name, product, location, email, messageBody} = req.body
+const { name, product, email, messageBody} = req.body
 
 let mailOptions = {
     from: process.env.EMAILER, 
     to: `${email}`,
     subject: `Product request from ${name}`, 
-    text: `Item requested: ${product} From: ${location} Message: ${messageBody}`,  
+    text: `Item requested: ${product} Message: ${messageBody}. You can answer through the internal messaging function.`,  
     }
 
 console.log("Sending email")

@@ -15,9 +15,9 @@
                   .then( getResults )
       }
 
-      function sendEmail( name, product, location, email, messageBody){
+      function sendEmail( name, product, email, messageBody){
         var url='/sendmail'
-        var data = { name, product, location, email, messageBody }
+        var data = { name, product, email, messageBody }
         return $http.post(url, data)
           .then(console.log('Email Sent from the factory'))
       }
