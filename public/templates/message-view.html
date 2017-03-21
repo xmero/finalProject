@@ -21,7 +21,7 @@
           <p>{{message.body}}</p>
         </td>
         <td class="" >
-          <p >{{message.timestamp}}</p>
+          <p >{{message.timestamp | date : 'short'}}</p>
         </td>
         <td>
           <button  ng-if="message.sender != loggedUser.id" data-target="#messageModal" data-toggle="modal" class="btn btn-request">Answer</button>

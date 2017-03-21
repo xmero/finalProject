@@ -45,7 +45,8 @@
     <div class="row container">
          <div class="col-xs-12 col-md-3 product-info container" ng-repeat="product in products">
                  <img src="{{ product.image }}" class="img-responsive">
-                <p ng-show="editMode">Status: </p>
+                <p>Status: </p>
+                 <p ng-hide="editMode">{{product.free}} </p>
                 <div ng-show="editMode">
                  <select  type="text" ng-model="product.free">
                   <option selected="selected" value='free'>Free</option>
