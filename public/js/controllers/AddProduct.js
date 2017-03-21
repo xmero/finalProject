@@ -18,7 +18,8 @@ angular.module("SharingTreeApp")
             .then(()=>{      
               const owner = $scope.loggedUser.id
               const image = $scope.imageLink
-              ProductsFactory.addProduct(owner, $scope.name, $scope.category, $scope.location, $scope.postalCode, $scope.description, image  )
+              const { name,category, location, postalCode, description } = $scope
+              ProductsFactory.addProduct( owner, name, category, location, postalCode, description, image )
                 .then (() => $location.path('/'))
                   })
          }
