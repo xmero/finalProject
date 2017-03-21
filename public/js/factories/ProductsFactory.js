@@ -3,6 +3,12 @@
   angular.module("SharingTreeApp")
     .factory("ProductsFactory", function($http, $routeParams) {
 
+      function  addProduct(owner, name, category, location, postalCode, description, image  ){
+        const data ={owner,  name, category, location, postalCode, description, image }
+        var url= `/products/api`
+         return $http.post(url, data)
+                  .then( getResults )
+      }
 
       function getProducts(){
         var url = '/products/api'
@@ -30,6 +36,7 @@
       }
 
       return {
+        addProduct:addProduct,
         getProducts: getProducts,
         getDetails: getDetails,
         deleteProduct: deleteProduct,

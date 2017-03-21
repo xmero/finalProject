@@ -1,2 +1,2 @@
-angular.module("SharingTreeApp", ['ngRoute','angular-jwt'])
+angular.module("SharingTreeApp", ['ngRoute','angular-jwt','ngFileUpload'])
 

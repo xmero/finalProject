@@ -79,7 +79,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Message the user</h4>
+                        <h4 class="modal-title">Review the user</h4>
                     </div>
                     <form class="form" method="post" name="newProduct" action="/users/api/review">
             <div class="modal-body">
@@ -91,8 +91,8 @@
                                 <input type="text " class="hidden" name="id" value="{{ user._id }}"> 
                                 <p>Enter your name:</p>
                                 <input type="text " name="reviewer" placeholder="User name ... ">  
-                                <p>Scoring:</p>
-                                <input type="number " name="rating" placeholder="Rating here ... "> 
+                                <p>Rating 0-5:</p>
+                                <input type="number" min="0" max="5" name="rating"> 
                                 <p>Write a brief message:</p>
                                 <textarea type="text" name="message" rows="5 " placeholder="Message... "></textarea>
                         </div>

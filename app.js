@@ -7,9 +7,12 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
-mongoose.Promise = global.Promise
 
 global.__base = __dirname + '/server/'
+
+mongoose.Promise = global.Promise
+
+const routerUpload = require('./server/routes/uploadImg')
 
 const routerUsers = require('./server/routes/users')
 const routerProducts = require('./server/routes/products')
@@ -41,6 +44,8 @@ app
   .use('/users/api', routerUsers)
   .use('/sendmail', routerMail)
 
+  .use('/upload',routerUpload)
 
   
+
   .listen(PORT, () => console.log(`Magic happens on Port ${PORT}...`))
