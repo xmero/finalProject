@@ -1,12 +1,12 @@
 <table class="">
-  <a  href="#!/messages/{{message.recipient}}">Back to Messages</a>
+  <a  href="#!/messages/{{loggedUser.id}}">Back to Messages</a>
   <thead>
       <tr>
           <th>From</th>
           <th>Subject</th>
           <th>Body</th>
-          <th ng-if="message.sender === loggedUser.id">Recieved</th>
-          <th ng-if="message.sender != loggedUser.id">Sent</th>
+          <th ng-if="message.sender === loggedUser.id">Sent</th>
+          <th ng-if="message.sender != loggedUser.id">Received</th>
       </tr>
   </thead>
   <tbody>
@@ -28,10 +28,10 @@
           <button  ng-if="message.sender === loggedUser.id" data-target="#messageModal" data-toggle="modal" class="btn btn-request">Send message</button>
         </td>
         <td>
-          <a href="#!/messages/{{message.recipient}}" ng-click="editMessage(message._id)" >Mark as Unread</a>
+          <a href="#!/messages/{{loggedUser.id}}" ng-click="editMessage(message._id)" >Mark as Unread</a>
         </td>
         <td>
-          <a href="#!/messages/{{message.recipient}}" ng-click="deleteMessage(message._id)" class="btn btn-danger" >DELETE</a>
+          <a href="#!/messages/{{message.recipient}}" ng-if="message.sender === loggedUser.id" ng-click="deleteMessage(message._id)" class="btn btn-danger" >DELETE</a>
         </td>
     </tr>
   </tbody>
