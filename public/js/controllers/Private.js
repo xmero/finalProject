@@ -52,6 +52,5 @@ angular.module("SharingTreeApp")
           StorageFactory.removeToken()
     })
     }
-
 })
 

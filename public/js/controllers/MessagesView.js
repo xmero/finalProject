@@ -1,12 +1,9 @@
 angular.module("SharingTreeApp")
 
-
 .controller('MessagesViewCtrl', function($scope, $rootScope, $routeParams, MessagesFactory, UsersFactory) {
     $rootScope.section = 'messageView'
 
     const id = $routeParams
-
-
 
     MessagesFactory.getMessageDetails(id.id)
         .then(function(message) {

@@ -57,8 +57,6 @@ angular.module("SharingTreeApp")
             controller: 'MessagesViewCtrl',
             secure: true
         })
-
-
 })
 
 .run(function($rootScope, $location, StorageFactory, AuthFactory){

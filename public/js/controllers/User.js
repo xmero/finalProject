@@ -1,6 +1,5 @@
 angular.module("SharingTreeApp")
 
-
 .controller('UserCtrl', function($scope, $rootScope, $routeParams, UsersFactory) {
     $rootScope.section = 'user'
     const id = $routeParams

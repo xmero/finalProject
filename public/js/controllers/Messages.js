@@ -1,6 +1,5 @@
 angular.module("SharingTreeApp")
 
-
 .controller('MessagesCtrl', function($scope, $rootScope, $routeParams, MessagesFactory,UsersFactory) {
     $rootScope.section = 'messages'
 

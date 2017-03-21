@@ -44,10 +44,6 @@ angular.module("SharingTreeApp")
             .then(()=>{
               console.log('Message Added!')
             })
-          }
-
-
-
-        
+          }        
 })
 
