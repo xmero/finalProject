@@ -33,7 +33,7 @@ angular.module("SharingTreeApp")
             templateUrl: '/templates/register.html',
             controller: 'RegisterCtrl'
         })
-        //////////////// LOGINSTEIN ROUTES
+      
         .when('/private',{
             templateUrl: '/templates/private.html',
             controller: 'PrivateCtrl',

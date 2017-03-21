@@ -9,14 +9,15 @@ const mongoose = require('mongoose')
 
 mongoose.Promise = global.Promise
 
+global.__base = __dirname + '/server/'
 
-const routerUsers = require('./routes/users')
-const routerProducts = require('./routes/products')
-const routerMail = require('./routes/mail')
-const routerMessaging = require('./routes/messaging')
+const routerUsers = require('./server/routes/users')
+const routerProducts = require('./server/routes/products')
+const routerMail = require('./server/routes/mail')
+const routerMessaging = require('./server/routes/messaging')
 
-const routesAuth = require('./routes/auth')
-const routesPrivate = require('./routes/private')
+const routesAuth = require('./server/routes/auth')
+const routesPrivate = require('./server/routes/private')
 
 const PORT = process.env.PORT || 3000
 const app = express()
