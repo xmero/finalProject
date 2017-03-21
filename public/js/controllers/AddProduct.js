@@ -1,22 +1,13 @@
 angular.module("SharingTreeApp")
 
-.controller('AddProductCtrl', function($scope, $location, $rootScope, Upload, ProductsFactory) {
+.controller('AddProductCtrl', function($scope, $location, $rootScope, ProductsFactory, Upload) {
     $rootScope.section = 'addProduct'
-
-
 
         $scope.fileSelected = (files) => {
           if (files && files.length) {
             $scope.file = files[0];
           }
         }
-
-        //  $scope.uploadFile = function(){
-        //   const url = '/upload' //node.js route
-        //   const file = $scope.file
-        //   Upload.upload({ url, file })
-        //     .success( ({imageLink}) => $scope.imageLink = imageLink )
-        // }
 
         $scope.addProduct = (e) => {
         e.preventDefault()
