@@ -6,7 +6,13 @@ module.exports = (req,res) => {
   let { name, location, description, image, free, postalCode } = req.body
   const updatedAt = Date.now()
 
-  Product.findByIdAndUpdate  ( id,  {name, location, description, image, free, postalCode, updatedAt } )
+  let properties = { name, location, description, free, postalCode }
+
+  if (image){
+    properties = { name, location, description, free, postalCode, image }
+  }
+
+  Product.findByIdAndUpdate  ( id,  properties )
     .then( product => {
       console.log('Product has been updated succesfully')
       res.json(product) 

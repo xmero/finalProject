@@ -6,7 +6,13 @@ module.exports = (req,res) => {
   const { username, email, location, description, image } = req.body
   const updatedAt = Date.now()
 
-  User.findByIdAndUpdate  ( id,  { username, email, location, description, image ,updatedAt } )
+  let properties = { username, email, location, description }
+
+  if (image){
+    properties = { username, email, location, description, image }
+  }
+
+  User.findByIdAndUpdate  ( id,  properties )
     .then( user => {
       console.log('User has been updated succesfully')
       res.json(user) 
